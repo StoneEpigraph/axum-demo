@@ -1,0 +1,20 @@
+[package]
+name = "rs-counter"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+axum = "0.7"
+axum-extra = {version = "0.9", features = ["typed-header"]}
+tokio = { version = "1.0", features = ["full"]}
+serde = { version = "1.0.203", features = ["derive"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"]}
+serde_json = "1.0"
+tower-http = {version = "0.5", features = ["trace", "request-id", "util"]}
+tower = "0.4"
+sqlx = {version = "0.7", features = ["runtime-tokio", "tls-rustls", "sqlite", "time"]}
+dotenvy = "0.15"
+time = {version = "0.3", features = ["serde-human-readable"]}
+anyhow = "1.0"
+jsonwebtoken = "9.0"
